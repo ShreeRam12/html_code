@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+    <link href="./output.css" rel="stylesheet">
+    <link href="/dist/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<style>
+    .navfont a {
+        transition: color 0.5s ease-in-out;
+    }
+
+    /* @media (min-width: 1024px) and (max-width: 2560px) {
+        .container1 {
+            display: flex;
+        }
+    } */
+
+    .container1 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        height: 500px;
+        gap: 10px;
+
+        >div {
+            flex: 0 0 120px;
+            border-radius: 0.5rem;
+            transition: 0.5s ease-in-out;
+            cursor: pointer;
+            box-shadow: 1px 5px 15px #1e0e3e;
+            position: relative;
+            overflow: hidden;
+
+
+            &:nth-of-type(1) {
+                background: url("assets/Indian_barber/Female_Make_Up_Artist.webp")repeat 50% / cover;
+            }
+
+            &:nth-of-type(2) {
+                background: url("assets/Indian_barber/Indian_barber_2.webp")no-repeat 50% / cover;
+            }
+
+            &:nth-of-type(3) {
+                background: url("assets/Indian_barber/Indian_barber_3.webp")repeat 50% / cover;
+            }
+
+            &:nth-of-type(4) {
+                background: url("assets/Indian_barber/Indian_barber_harcut_3.webp")repeat 50% / cover;
+            }
+
+            &:nth-of-type(5) {
+                background: url("assets/Indian_barber/Shruthi_MakeUp_stylist.webp")repeat 50% / cover;
+            }
+
+            &:nth-of-type(6) {
+                background: url("assets/Indian_barber/Indian_barber_image.webp")repeat 50% / cover;
+            }
+
+            &:nth-of-type(7) {
+                background: url("assets/Indian_barber/Shaving_barber.webp")repeat 50% / cover;
+            }
+
+            &:nth-of-type(8) {
+                background: url("assets/Indian_barber/Last_indian_barber.webp")repeat 50% / cover;
+            }
+
+            .content {
+                font-size: 1.5rem;
+                color: #fff;
+                display: flex;
+                align-items: center;
+                padding: 15px;
+                opacity: 0;
+                flex-direction: column;
+                height: 100%;
+                justify-content: flex-end;
+                background: rgb(2, 2, 46);
+                background: linear-gradient(0deg,
+                        rgba(2, 2, 46, 0.6755077030812324) 0%,
+                        rgba(255, 255, 255, 0) 100%);
+                transform: translatey(100%);
+                transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
+                visibility: hidden;
+
+                span {
+                    display: block;
+                    margin-top: 5px;
+                    font-size: 1.2rem;
+                }
+            }
+
+            &:hover {
+                flex: 0 0 250px;
+                box-shadow: 1px 3px 15px #7645d8;
+                transform: translatey(-30px);
+            }
+
+            &:hover .content {
+                opacity: 1;
+                transform: translatey(0%);
+                visibility: visible;
+            }
+        }
+    }
+</style>
+
+<body>
+    <section class="sticky top-0 left-0 z-50">
+        <!-- NAVBAR  -->
+        <div class=" bg-white shadow-lg">
+            <div class="container mx-auto flex items-center justify-between py-3 px-5">
+                <div class="w-20">
+                    <img src="assets/Indian_barber/Unisex_Saloon_Logo.webp" alt="Barber Logo">
+                </div>
+                <div class="hidden md:flex space-x-5 text-lg navfont">
+                    <a href="#" class="hover:text-amber-700 animate__animated animate__fadeInUp">Home</a>
+                    <a href="#" class="hover:text-amber-700 animate__animated animate__fadeInUp">Services</a>
+                    <a href="#" class="hover:text-amber-700 animate__animated animate__fadeInUp">Book and
+                        Appointment</a>
+                    <a href="#" class="hover:text-amber-700 animate__animated animate__fadeInUp">Blogs</a>
+                    <a href="#" class="hover:text-amber-700 animate__animated animate__fadeInUp">Contact US</a>
+                </div>
+                <div class="hidden md:flex gap-5">
+                    <div>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-cart-plus"></i>
+                    </div>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-xl">
+                        <i id="menu-icon" class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden fixed bg-white w-full z-30 md:hidden lg:hidden">
+            <div class="flex flex-col items-center space-y-4 py-5">
+                <a href="#" class="hover:text-amber-700 navfont animate__animated animate__fadeInUp">Home</a>
+                <a href="#" class="hover:text-amber-700 navfont animate__animated animate__fadeInUp">Services</a>
+                <a href="#" class="hover:text-amber-700 navfont animate__animated animate__fadeInUp">Book and
+                    Appointment</a>
+                <a href="#" class="hover:text-amber-700 navfont animate__animated animate__fadeInUp">Blogs</a>
+                <a href="#" class="hover:text-amber-700 navfont animate__animated animate__fadeInUp">Contact US</a>
+                <div class="flex gap-5">
+                    <div>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-cart-plus"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- BARBER_HOME_PAGE  -->
+    <section class="barber_main">
+        <!-- HERO SECTION  -->
+        <!-- Carousel for Mobile View  -->
+        <div id="default-carousel" class="relative block md:block lg:hidden xl:hidden w-full md:w-full pt-10"
+            data-carousel="slide">
+            <!-- Carousel wrapper -->
+            <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+                <!-- Item 1 -->
+                <div class="carousel-item hidden duration-700 ease-in-out w-full md:w-full absolute inset-0"
+                    data-carousel-item>
+                    <img src="assets/Indian_barber/Female_Make_Up_Artist.webp"
+                        class="absolute block w-full h-full object-cover" alt="...">
+                    <div
+                        class="content absolute inset-0 flex flex-col justify-center items-center text-center text-white  bg-black bg-opacity-25">
+                        <h2 class="navfont text-2xl mt-20">Malini</h2>
+                        <span class="navfont text-lg">Senior MakeUp Specialist</span>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="carousel-item hidden duration-700 ease-in-out w-full md:w-full absolute inset-0"
+                    data-carousel-item>
+                    <img src="assets/Indian_barber/Indian_barber_2.webp"
+                        class="absolute block w-full h-full object-cover" alt="...">
+                    <div
+                        class="content absolute inset-0 flex flex-col justify-center items-center text-center text-white  bg-black bg-opacity-25">
+                        <h2 class="navfont text-2xl mt-20">Aswanth</h2>
+                        <span class="navfont text-lg">Haircut Specialist</span>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="carousel-item hidden duration-700 ease-in-out w-full md:w-full absolute inset-0"
+                    data-carousel-item>
+                    <img src="assets/Indian_barber/Indian_barber_3.webp"
+                        class="absolute block w-full h-full object-cover" alt="...">
+                    <div
+                        class="content absolute inset-0 flex flex-col justify-center items-center text-center text-white  bg-black bg-opacity-25">
+                        <h2 class="navfont text-2xl mt-20">Siddarth</h2>
+                        <span class="navfont text-lg">Grooming Specilaist</span>
+                    </div>
+                </div>
+                <!-- Item 4 -->
+                <div class="carousel-item hidden duration-700 ease-in-out w-full md:w-full absolute inset-0"
+                    data-carousel-item>
+                    <img src="assets/Indian_barber/Indian_barber_harcut_3.webp"
+                        class="absolute block w-full h-full object-cover" alt="...">
+                    <div
+                        class="content absolute inset-0 flex flex-col justify-center items-center text-center text-white  bg-black bg-opacity-25">
+                        <h2 class="navfont text-2xl mt-20">Mathew</h2>
+                        <span class="navfont text-lg">Senior Haircut Specialist</span>
+                    </div>
+                </div>
+                <!-- Item 5 -->
+                <div class="carousel-item hidden duration-700 ease-in-out w-full md:w-full absolute inset-0"
+                    data-carousel-item>
+                    <img src="assets/Indian_barber/Shruthi_MakeUp_stylist.webp"
+                        class="absolute block w-full h-full object-cover" alt="...">
+                    <div
+                        class="content absolute inset-0 flex flex-col justify-center items-center text-center text-white  bg-black bg-opacity-25">
+                        <h2 class="navfont text-2xl mt-20">Shruthi</h2>
+                        <span class="navfont text-lg">Junior MakeUp Artist</span>
+                    </div>
+                </div>
+                <!-- Item 5 -->
+                <div class="carousel-item hidden duration-700 ease-in-out w-full md:w-full absolute inset-0"
+                    data-carousel-item>
+                    <img src="assets/Indian_barber/Indian_barber_image.webp"
+                        class="absolute block w-full h-full object-cover" alt="...">
+                    <div
+                        class="content absolute inset-0 flex flex-col justify-center items-center text-center text-white  bg-black bg-opacity-25">
+                        <h2 class="navfont text-2xl mt-20">Ashok</h2>
+                        <span class="navfont text-lg">Senior Grooming Specialist</span>
+                    </div>
+                </div>
+                <!-- Item 5 -->
+                <div class="carousel-item hidden duration-700 ease-in-out w-full md:w-full absolute inset-0"
+                    data-carousel-item>
+                    <img src="assets/Indian_barber/Shaving_barber.webp"
+                        class="absolute block w-full h-full object-cover" alt="...">
+                    <div
+                        class="content absolute inset-0 flex flex-col justify-center items-center text-center text-white  bg-black bg-opacity-25">
+                        <h2 class="navfont text-2xl mt-20">Prakash</h2>
+                        <span class="navfont text-lg">Shaving Expert</span>
+                    </div>
+                </div>
+                <!-- Item 5 -->
+                <div class="carousel-item hidden duration-700 ease-in-out w-full md:w-full absolute inset-0"
+                    data-carousel-item>
+                    <img src="assets/Indian_barber/Last_indian_barber.webp"
+                        class="absolute block w-full h-full object-cover" alt="...">
+                    <div
+                        class="content absolute inset-0 flex flex-col justify-center items-center text-center text-white  bg-black bg-opacity-25">
+                        <h2 class="navfont text-2xl mt-20">Raju</h2>
+                        <span class="navfont text-lg">Junior Haircut Specialist</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Slider indicators -->
+            <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1"
+                    data-carousel-slide-to="0"></button>
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2"
+                    data-carousel-slide-to="1"></button>
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3"
+                    data-carousel-slide-to="2"></button>
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4"
+                    data-carousel-slide-to="3"></button>
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5"
+                    data-carousel-slide-to="4"></button>
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5"
+                    data-carousel-slide-to="4"></button>
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5"
+                    data-carousel-slide-to="4"></button>
+            </div>
+            <!-- Slider controls -->
+            <button type="button"
+                class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                data-carousel-prev>
+                <span
+                    class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M5 1 1 5l4 4" />
+                    </svg>
+                    <span class="sr-only">Previous</span>
+                </span>
+            </button>
+            <button type="button"
+                class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                data-carousel-next>
+                <span
+                    class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m1 9 4-4-4-4" />
+                    </svg>
+                    <span class="sr-only">Next</span>
+                </span>
+            </button>
+        </div>
+
+        <section class="hidden lg:block">
+            <div class="container1 pt-10">
+                <div class="mt-10">
+                    <div class="content">
+                        <h2 class="navfont">Malini</h2>
+                        <span class="navfont text-center">Senior MakeUp Specialist </span>
+                    </div>
+                </div>
+                <div class="mt-10">
+                    <div class="content">
+                        <h2 class="navfont">Aswanth</h2>
+                        <span class="navfont">Haircut Specialist</span>
+                    </div>
+                </div>
+                <div class="mt-10">
+                    <div class="content">
+                        <h2 class="navfont">Siddarth</h2>
+                        <span class="navfont">Grooming Specilaist</span>
+                    </div>
+                </div>
+                <div class="mt-10">
+                    <div class="content">
+                        <h2 class="navfont">Mathew</h2>
+                        <span class="navfont text-center">Senior Haircut Specialist</span>
+                    </div>
+                </div>
+                <div class="mt-10">
+                    <div class="content">
+                        <h2 class="navfont">Shruthi</h2>
+                        <span class="navfont">Junior MakeUp Artist</span>
+                    </div>
+                </div>
+                <div class="mt-10">
+                    <div class="content">
+                        <h2 class="navfont">Ashok</h2>
+                        <span class="navfont text-center">Senior Grooming Specialist</span>
+                    </div>
+                </div>
+                <div class="mt-10">
+                    <div class="content">
+                        <h2 class="navfont">Prakash</h2>
+                        <span class="navfont">Shaving Specialist</span>
+                    </div>
+                </div>
+                <div class="mt-10">
+                    <div class="content">
+                        <h2 class="navfont">Raju</h2>
+                        <span class="navfont text-center">Junior Haircut Specialist</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ABOUT US  -->
+        <section id="aboutus"
+            class="aboutus bg-no-repeat bg-center sm:bg-center md:bg-left lg:bg-right xl:bg-left mt-10">
+            <div class="container mx-auto p-10">
+                <div class="ml-auto">
+                    <div
+                        class="text-4xl md:text-4xl lg:text-5xl font-bold text-white navfont  animate__animated animate__fadeInLeft">
+                        About Us
+                    </div>
+                    <div class="text-2xl font-bold text-white navfont mt-5 animate__animated animate__fadeInUp">Welcome
+                        to BarberX!</div>
+
+                    <p class="animate__animated animate__fadeInUp text-white text-md mt-5 w-full lg:w-96 navfont">At
+                        BarberX, we
+                        believe in providing exceptional
+                        salon
+                        services
+                        to all our clients. Our salon is
+                        a
+                        haven of relaxation and rejuvenation, where you can escape the hustle and bustle of daily life
+                        and
+                        indulge
+                        in a variety of beauty and grooming treatments. With a team of highly skilled and experienced
+                        professionals,
+                        we cater to the unique needs of both men and women, ensuring that every visit is a memorable
+                        one.
+                    </p>
+                </div>
+                <div>
+                    <div class="text-2xl font-bold text-white navfont mt-10  animate__animated animate__fadeInUp">Our
+                        Mission</div>
+
+                    <p class="text-white text-md navfont mt-5 w-full lg:w-96 animate__animated animate__fadeInUp"> Our
+                        mission is to deliver top-notch services that
+                        enhance
+                        your
+                        natural beauty and boost your confidence.
+                        We
+                        are committed to using high-quality products and the latest techniques to achieve the best
+                        results
+                        for
+                        our
+                        clients. Your satisfaction is our priority, and we strive to exceed your expectations with every
+                        visit.
+                    </p>
+                </div>
+                <div>
+                    <div class="text-2xl font-bold text-white navfont mt-10 animate__animated animate__fadeInUp">Our
+                        Vision</div>
+
+                    <p class="text-white text-md navfont mt-5 w-full lg:w-96 animate__animated animate__fadeInUp">To be
+                        the leading unisex salon in the region, known
+                        for
+                        our
+                        exceptional services, welcoming atmosphere,
+                        and
+                        dedication to customer satisfaction.</p>
+                </div>
+            </div>
+        </section>
+        <!-- SERVICES  -->
+        <section id="services"
+            class="services bg-no-repeat bg-center sm:bg-center md:bg-left lg:bg-right xl:bg-left mt-10">
+            <div class="container mx-auto p-10">
+                <div
+                    class="text-4xl md:text-4xl lg:text-5xl text-white navfont font-bold animate__animated animate__fadeInLeft">
+                    Services</div>
+                <div class="flex md:justify-end lg:justify-end gap-5 flex-wrap md:flex-nowrap mt-10">
+                    <div>
+                        <div>
+                            <div class="text-2xl font-bold text-white navfont animate__animated animate__fadeInUp">Hair
+                                Services</div>
+                            <ul class="text-white navfont mt-3 animate__animated animate__fadeInUp">
+                                <li>Haircuts & Styling</li>
+                                <li>Hair Cooling</li>
+                                <li>HighLights & Lowlights</li>
+                                <li>Hair Extensions</li>
+                                <li>Perming & Straightening</li>
+                                <li>Hair Treatments</li>
+                            </ul>
+                        </div>
+                        <div class="mt-5">
+                            <div class="text-2xl font-bold text-white navfont animate__animated animate__fadeInUp">Skin
+                                Care</div>
+                            <ul class="text-white navfont mt-3 animate__animated animate__fadeInUp">
+                                <li>Facials</li>
+                                <li>Skin Treatments</li>
+                                <li>Waxing</li>
+                                <li>Threading</li>
+                            </ul>
+                        </div>
+                        <div class="mt-5">
+                            <div class="text-2xl font-bold text-white navfont animate__animated animate__fadeInUp">Nail
+                                Care</div>
+                            <ul class="text-white navfont mt-3 animate__animated animate__fadeInUp">
+                                <li>Manicures</li>
+                                <li>Pedicures</li>
+                                <li>Nail Art</li>
+                                <li>Gel & Acrylic Nails</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="mt-5 md:mt-0">
+                            <div class="text-2xl font-bold text-white navfont animate__animated animate__fadeInUp">Make
+                                Up</div>
+                            <ul class="text-white navfont mt-3 animate__animated animate__fadeInUp">
+                                <li>Bridal Makeup</li>
+                                <li>Party Makeup</li>
+                                <li>Everyday Makeup</li>
+                                <li>Makeup Consaltations</li>
+                            </ul>
+                        </div>
+                        <div class="mt-5">
+                            <div class="text-2xl font-bold text-white navfont animate__animated animate__fadeInUp">Spa
+                                Services</div>
+                            <ul class="text-white navfont mt-3 animate__animated animate__fadeInUp">
+                                <li>Massages</li>
+                                <li>Body Scrubs</li>
+                                <li>Aromatherapy</li>
+                            </ul>
+                        </div>
+                        <div class="mt-5">
+                            <div class="text-2xl font-bold text-white navfont animate__animated animate__fadeInUp">
+                                Additional Services</div>
+                            <ul class="text-white navfont mt-3 animate__animated animate__fadeInUp">
+                                <li>Beard Grooming</li>
+                                <li>Eyelash Extensions</li>
+                                <li>Henna Tatoos</li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <!-- PRICING  -->
+        <section id="pricing"
+            class="pricing bg-no-repeat bg-center sm:bg-center md:bg-left lg:bg-right xl:bg-left mt-10">
+            <div class="container mx-auto p-10">
+                <div
+                    class="text-4xl md:text-4xl lg:text-5xl text-white navfont font-bold animate__animated animate__fadeInLeft">
+                    Pricing</div>
+                <div class="flex justify-around flex-wrap md:flex-nowrap mt-10">
+                    <div>
+                        <div>
+                            <div class="text-2xl font-bold text-white navfont animate__animated animate__fadeInUp">Hair
+                                Services</div>
+                            <ul class="text-white navfont mt-3 animate__animated animate__fadeInUp">
+                                <li>Haircuts: Starting at ₹500</li>
+                                <li>Hair Coloring: Starting at ₹1500</li>
+                                <li>Highlights & Lowlights: Starting at ₹2000</li>
+                                <li>Hair Extensions: Price upon consultation</li>
+                                <li>Perming & Straightening: Starting at ₹3000</li>
+                                <li>Hair Treatments: Starting at ₹1000</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="text-2xl font-bold text-white navfont mt-5 animate__animated animate__fadeInUp">
+                                Skin Care</div>
+                            <ul class="text-white navfont mt-3 animate__animated animate__fadeInUp">
+                                <li>Facials: Starting at ₹1000</li>
+                                <li>Skin Treatments: Starting at ₹1500</li>
+                                <li>Waxing: Starting at ₹300</li>
+                                <li>Threading: Starting at ₹100</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="text-2xl font-bold text-white navfont mt-5 animate__animated animate__fadeInUp">
+                                Nail Care</div>
+                            <ul class="text-white navfont mt-3 animate__animated animate__fadeInUp">
+                                <li>Manicures: Starting at ₹500</li>
+                                <li>Pedicures: Starting at ₹600</li>
+                                <li>Nail Art: Starting at ₹300</li>
+                                <li>Gel & Acrylic Nails: Starting at ₹1500</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="flex justify-around flex-nowrap md:flex-nowrap">
+                        <div>
+                            <div>
+                                <div class="text-2xl font-bold text-white navfont animate__animated animate__fadeInUp">
+                                    Makeup</div>
+                                <ul class="text-white navfont mt-3 animate__animated animate__fadeInUp">
+                                    <li>Bridal Makeup: Starting at ₹5000</li>
+                                    <li>Party Makeup: Starting at ₹2000</li>
+                                    <li>Everyday Makeup: Starting at ₹1500</li>
+                                    <li>Makeup Consultations: Starting at ₹1000</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <div
+                                    class="text-2xl font-bold text-white navfont mt-5 animate__animated animate__fadeInUp">
+                                    Spa Services</div>
+                                <ul class="text-white navfont mt-3 animate__animated animate__fadeInUp">
+                                    <li>Massages: Starting at ₹1500</li>
+                                    <li>Body Scrubs: Starting at ₹2000</li>
+                                    <li>Aromatherapy: Starting at ₹2500</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <div
+                                    class="text-2xl font-bold text-white navfont mt-5 animate__animated animate__fadeInUp">
+                                    Additional Services</div>
+                                <ul class="text-white navfont mt-3 animate__animated animate__fadeInUp">
+                                    <li>Beard Grooming: Starting at ₹300</li>
+                                    <li>Eyelash Extensions: Starting at ₹2000</li>
+                                    <li>Henna Tattoos: Starting at ₹500</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- BARBERS  -->
+        <section id="barbers"
+            class="barbers bg-no-repeat bg-center sm:bg-center md:bg-left lg:bg-right xl:bg-left mt-10">
+            <div class="container mx-auto p-10">
+                <div
+                    class="text-4xl md:text-4xl lg:text-5xl text-white font-bold navfont animate__animated animate__fadeInLeft">
+                    Barbers</div>
+                <div class="text-2xl text-white font-bold navfont mt-5 animate__animated animate__fadeInUp">Meet Our
+                    Stylists Barbers</div>
+
+                <p class="text-white text-md navfont mt-3 animate__animated animate__fadeInUp">At BarberX, we take pride
+                    in our team of professional barbers
+                    who
+                    are
+                    passionate about their craft
+                    and dedicated to providing exceptional service. Each member of our team brings a unique set of
+                    skills
+                    and
+                    experiences, ensuring that you receive the best possible care.</p>
+                <div class=" ">
+                    <div class="flex gap-10 flex-wrap md:flex-nowrap">
+                        <div>
+                            <div class="w-full md:w-52 lg:w-72 mt-10 flex justify-center">
+                                <img src="assets/Medium_Haircut.webp" alt="" class="rounded-lg max-w-full">
+                            </div>
+
+                            <div
+                                class="text-2xl text-white font-bold navfont mt-10 animate__animated animate__fadeInUp">
+                                John Doe</div>
+                            <div class="text-xl text-white font-bold navfont mt-5 animate__animated animate__fadeInUp">
+                                Senior Barber</div>
+                            <p class="text-white text-md navfont mt-3 animate__animated animate__fadeInUp">John has over
+                                10 years of experience in the
+                                industry
+                                and
+                                specializes
+                                in modern and classic haircuts. His
+                                attention to detail and creative flair make him a favorite among our clients.</p>
+                        </div>
+                        <div>
+                            <div class="w-full md:w-52 lg:w-72 mt-10">
+                                <img src="assets/Cheerful_barber.webp" alt="" class="rounded-lg ">
+                            </div>
+                            <div
+                                class="text-2xl text-white font-bold navfont mt-10 animate__animated animate__fadeInUp">
+                                Mary Kingston</div>
+                            <div class="text-xl text-white font-bold navfont mt-5 animate__animated animate__fadeInUp">
+                                Master Stylist</div>
+                            <p class="text-white text-md navfont mt-3 animate__animated animate__fadeInUp">
+                                Jane is known for her expertise in hair coloring and styling. With a keen eye for trends
+                                and
+                                a
+                                commitment to
+                                perfection, she ensures that every client leaves the salon looking and feeling their
+                                best.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class=" ">
+                    <div class="flex gap-9 flex-wrap md:flex-nowrap">
+                        <div class="w-full  lg:w-4/6">
+                            <div class="w-full md:w-52 lg:w-72 mt-10">
+                                <img src="assets/Beard_Grooming.webp" alt="" class="rounded-lg ">
+                            </div>
+                            <div
+                                class="text-2xl text-white font-bold navfont mt-10 animate__animated animate__fadeInUp">
+                                Zoya Zendie</div>
+                            <div class="text-xl text-white font-bold navfont mt-5 animate__animated animate__fadeInUp">
+                                Barber & Grooming Specialist</div>
+                            <p class="text-white text-md navfont mt-3 animate__animated animate__fadeInUp">Michael
+                                excels in beard grooming and
+                                <br>traditional
+                                barbering techniques. His friendly demeanor and skillful
+                                <br> hands make him the go-to barber for a <br>flawless grooming experience.
+                            </p>
+                            </p>
+                        </div>
+                        <div>
+                            <div class="w-full md:w-52 lg:w-72 p-3 mt-7">
+                                <img src="assets/Barber_Expert.webp" alt="" class="rounded-lg ">
+                            </div>
+                            <div class="text-2xl text-white font-bold navfont mt-7 animate__animated animate__fadeInUp">
+                                Emily Davis</div>
+                            <div class="text-xl text-white font-bold navfont mt-5 animate__animated animate__fadeInUp">
+                                Hair & Makeup Artist</div>
+                            <p class="text-white text-md navfont mt-3 animate__animated animate__fadeInUp">
+                                Emily is a versatile artist who excels in both hair and makeup. Her talent for creating
+                                stunning looks for <br>special occasions has earned her a loyal following among our
+                                clients.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- FOOTER  -->
+        <section class="footer bg-no-repeat bg-center sm:bg-center md:bg-left lg:bg-right xl:bg-left mt-10">
+            <div
+                class="flex p-10 md:gap-10 lg:justify-between md:p-5 lg:p-10 container mx-auto flex-wrap md:flex-nowrap">
+                <div>
+                    <div class="text-white text-md navfont font-bold animate__animated animate__fadeInUp">Opening Hours
+                    </div>
+                    <ul class="text-white text-md navfont mt-3 space-y-3 animate__animated animate__fadeInUp">
+                        <li>Monday to Friday: 9:00 AM - 9:00 PM</li>
+                        <li>Saturday: 9:00 AM - 8:00 PM</li>
+                        <li>Sunday: 10:00 AM - 6:00 PM</li>
+                    </ul>
+                </div>
+                <div>
+                    <div
+                        class="mt-5 md:mt-0 lg:mt-0 text-white text-md navfont font-bold animate__animated animate__fadeInUp">
+                        Quick Links
+                    </div>
+                    <ul class="text-white text-md navfont mt-3  space-y-3">
+                        <li id="#aboutus" class="cursor-pointer">About Us</li>
+                        <li id="#services" class="cursor-pointer">Services</li>
+                        <li id="#pricing" class="cursor-pointer">Pricing</li>
+                        <li id="#barbers" class="cursor-pointer">Barbers</li>
+                    </ul>
+                </div>
+                <div>
+                    <div
+                        class="mt-5 md:mt-0 lg:mt-0 text-white text-md navfont font-bold animate__animated animate__fadeInUp">
+                        Contact US
+                    </div>
+                    <div class="text-white text-md navfont mt-3 animate__animated animate__fadeInUp">BarberX
+                        3rd Main Street,
+                        <br> Chennai, Tamil Nadu,
+                        India 600088
+                    </div>
+                    <div class="text-white text-md navfont animate__animated animate__fadeInUp">Phone: +91-778-456-2000
+                    </div>
+                    <div class="text-white text-md navfont animate__animated animate__fadeInUp">Email: info@barberX.com
+                    </div>
+                </div>
+                <div>
+                    <div
+                        class="mt-5 md:mt-0 lg:mt-0 text-white text-md navfont font-bold animate__animated animate__fadeInUp">
+                        NewsLetter
+                    </div>
+                    <div class="text-white text-md navfont mt-3  animate__animated animate__fadeInUp">Subscribe to our
+                        newsletter to receive <br>exclusive
+                        offers
+                        and <br>
+                        the latest news from BarberX!</div>
+                    <div
+                        class="animate__animated animate__fadeInUp bg-yellow-500 flex justify-center text-center p-3 w-32 mt-10 rounded-lg navfont cursor-pointer hover:text-white duration-1000 ease-in-out">
+                        SUBSCRIBE</div>
+                </div>
+            </div>
+            <div>
+                <div class="animate__animated animate__fadeInUp text-white text-md navfont text-center bg-black p-5">
+                    Copyright © 2024 BarberX Shop | All
+                    rights reserved.</div>
+            </div>
+        </section>
+    </section>
+
+    <!-- NavBar Responsive -->
+
+    <script>
+        document.getElementById('menu-btn').addEventListener('click', function () {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+            menu.classList.toggle('hidden');
+            if (menu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+    </script>
+
+    <!-- WebPage Animations  -->
+    <script>
+        window.addEventListener('scroll', function () {
+            const scrollSections = document.querySelectorAll('.scroll-section');
+            scrollSections.forEach(section => {
+                if (isInViewport(section)) {
+                    section.classList.add('animate__animated', 'animate__fadeInUp');
+                } else {
+                    section.classList.remove('animate__animated', 'animate__fadeInUp');
+                }
+            });
+        });
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+    </script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                },
+                1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 40,
+                },
+            },
+        });
+    </script>
+
+</body>
+
+</html>
