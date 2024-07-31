@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing</title>
+    <link href="./output.css" rel="stylesheet">
+    <link href="/dist/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<style>
+    .active {
+        /* Add any style you want for the active tab */
+        font-weight: bold;
+        color: yellow;
+    }
+</style>
+
+<body>
+    <!-- NAVBAR  -->
+    <section class="sticky top-0 left-0 z-50">
+        <!-- NAVBAR  -->
+        <div class=" bg-black shadow-lg">
+            <div class="container mx-auto flex items-center justify-between  py-3 px-5 ">
+                <div class="w-28 md:w-32 lg:w-40 cursor-pointer">
+                    <img src="assets/Indian_barber/Unisex_Saloon_Logo.webp" alt="Barber Logo">
+                </div>
+                <div class="hidden md:flex md:space-x-5 lg:space-x-10 md:text-md lg:text-lg navfont">
+                    <a href="index.html"
+                        class="hover:text-amber-700 text-white duration-500 ease-in-out animate__animated animate__fadeInUp">Home</a>
+                    <a href="services.html"
+                        class="hover:text-amber-700 text-white duration-500 ease-in-out animate__animated animate__fadeInUp">Services</a>
+                    <a href="pricing.html"
+                        class="hover:text-amber-700 text-white duration-500 ease-in-out animate__animated animate__fadeInUp">Pricing</a>
+                    <a href="appointment.html"
+                        class="hover:text-amber-700 text-white duration-500 ease-in-out animate__animated animate__fadeInUp">Book
+                        and
+                        Appointment</a>
+                    <a href="blogs.html"
+                        class="hover:text-amber-700 text-white duration-500 ease-in-out animate__animated animate__fadeInUp">Blogs</a>
+                    <a href="contactus.html"
+                        class="hover:text-amber-700 text-white duration-500 ease-in-out animate__animated animate__fadeInUp">Contact
+                        US</a>
+                </div>
+                <div class="hidden md:flex gap-5">
+                    <div>
+                        <i class="fa-solid fa-magnifying-glass" style="color: white;"></i>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-cart-plus" style="color: white;"></i>
+                    </div>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-xl">
+                        <i id="menu-icon" class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden fixed bg-white w-full z-30 md:hidden lg:hidden">
+            <div class="flex flex-col items-center space-y-4 py-5">
+                <a href="#" class="hover:text-amber-700 navfont animate__animated animate__fadeInUp">Home</a>
+                <a href="#" class="hover:text-amber-700 navfont animate__animated animate__fadeInUp">Services</a>
+                <a href="pricing.html" class="hover:text-amber-700 animate__animated animate__fadeInUp">Pricing</a>
+                <a href="#" class="hover:text-amber-700 navfont animate__animated animate__fadeInUp">Book and
+                    Appointment</a>
+                <a href="#" class="hover:text-amber-700 navfont animate__animated animate__fadeInUp">Blogs</a>
+                <a href="#" class="hover:text-amber-700 navfont animate__animated animate__fadeInUp">Contact US</a>
+                <div class="flex gap-5">
+                    <div>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-cart-plus"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- TAB NAVIGATION  -->
+    <section class="bg-slate-900 bg-transparent pricing_menu">
+        <div class="container mx-auto p-4 ">
+            <div class="flex justify-center mb-4">
+                <ul class="flex space-x-4 navfont animate__animated animate__fadeInUp font-bold">
+                    <li>
+                        <button class="tab-link text-white" onclick="openTab(event, 'mens')">Men's Pricing</button>
+                    </li>
+                    <li>
+                        <button class="tab-link text-white" onclick="openTab(event, 'womens')">Women's Pricing</button>
+                    </li>
+                </ul>
+            </div>
+            <div id="mens" class="tab-content">
+                <h2 class="text-5xl font-bold text-white navfont animate__animated animate__fadeInLeft">Men's Pricing
+                </h2>
+                <div class="flex justify-around flex-wrap md:flex-nowrap mt-10">
+                    <div>
+                        <div>
+                            <div class="text-2xl font-bold text-white navfont animate__animated animate__fadeInUp">CUT &
+                                SHAVE</div>
+                            <ul class="text-white navfont mt-3 animate__animated animate__fadeInUp space-y-5">
+                                <li>Hair Cut: &#8377;200</li>
+                                <li>Hair Style Change : &#8377;250</li>
+                                <li>Celebrity Style Cut: &#8377;500</li>
+                                <li>Kid's Cut ( Below 8 Years): &#8377;300 </li>
+                                <li>Shampoo + Blow Dry: &#8377;125</li>
+                                <li>Shave : &#8377;100</li>
+                                <li>Beard Trimming : &#8377;100</li>
+                                <li>Beard Styling : &#8377;100</li>
+                                <li>Beard grey coverage / colour : &#8377;100</li>
+                                <li>Beard Spa : &#8377;200</li>
+                                <li>Threading : &#8377;75</li>
+                            </ul>
+                        </div>
+                        <div class="mt-10">
+                            <div class="text-2xl font-bold text-white navfont mt-5 animate__animated animate__fadeInUp">
+                                HAIR TREATMENT (NOT FOR A LONG
+                                HAIR)</div>
+                            <ul class="text-white navfont mt-3 animate__animated animate__fadeInUp space-y-5">
+                                <li>RE-bonding: &#8377;1500</li>
+                                <li>Smoothening: &#8377;1500</li>
+                                <li>Curling: &#8377;300</li>
+                                <li>Moisture / keratin Therapy: &#8377;100</li>
+                            </ul>
+                        </div>
+                        <div class="mt-10">
+                            <div class="text-2xl font-bold text-white navfont mt-5 animate__animated animate__fadeInUp">
+                                Hair Colouring</div>
+                            <ul class="text-white navfont mt-3 animate__animated animate__fadeInUp space-y-5">
+                                <li>Root Touchup: Regular : &#8377;350 , Member : &#8377;280</li>
+                                <li>Ammonia Free: Basic : &#8377;700 , Standard : &#8377;450 , Premium : &#8377;999</li>
+                                <li>Global Colour: Basic : - , Standard : &#8377;450 , Premium : &#8377;999</li>
+                                <li>Hair Streaks: Basic : &#8377;250 , Standard : &#8377;450 , Premium : &#8377;999</li>
+                                <li>Full Streaks: Basic : &#8377;400 , Standard : &#8377;450 , Premium : &#8377;999</li>
+                            </ul>
+                        </div>
+                        <div class="mt-10">
+                            <div class="text-2xl font-bold text-white navfont animate__animated animate__fadeInUp">
+                                HAIR CARE</div>
+                            <ul class="text-white navfont mt-3 animate__animated animate__fadeInUp space-y-5">
+                                <li>Hair Spa: Basic : &#8377;450 , Standard : &#8377;600 , Premium : &#8377;850</li>
+                                <li>Head Massage: Basic : &#8377;200 , Standard : &#8377;250 , Premium : &#8377;300
+                                </li>
+                                <li>Henna: Basic : &#8377;150 , Standard : &#8377;200 , Premium : &#8377;250</li>
+                                <li>Hair Colour: Basic : &#8377;700 , Standard : &#8377;850 , Premium : &#8377;1000
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mt-10">
+                            <div class="text-2xl font-bold text-white navfont mt-5 animate__animated animate__fadeInUp">
+                                SKIN CARE</div>
+                            <ul class="text-white navfont mt-3 animate__animated animate__fadeInUp space-y-5">
+                                <li>Clean Up: Basic : &#8377;400 , Standard : &#8377;600 , Premium : &#8377;900</li>
+                                <li>Blech: Basic : &#8377;250 , Standard : &#8377;300 , Premium : &#8377;350</li>
+                                <li>De- tan: Basic : &#8377;300 , Standard : &#8377;350 , Premium : &#8377;400</li>
+                                <li>Hydra- Facial: Basic : &#8377;1200 , Standard : &#8377;1800 , Premium :
+                                    &#8377;2400</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="flex justify-around flex-nowrap md:flex-nowrap">
+                        <div>
+                            <div>
+                                <div
+                                    class="text-2xl font-bold text-white navfont mt-5 lg:mt-0 animate__animated animate__fadeInUp">
+                                    Waxing</div>
+                                <ul class="text-white navfont mt-3 animate__animated animate__fadeInUp space-y-5">
+                                    <li>Full Face Wax: Basic : &#8377;300 , Standard : &#8377;400 , Premium : &#8377;500
+                                    </li>
+                                    <li>Under Arm: Basic : &#8377;70 , Standard : &#8377;85 , Premium : &#8377;100</li>
+                                    <li>Full Arm: Basic : &#8377;300 , Standard : &#8377;350 , Premium : &#8377;400</li>
+                                    <li>Half Leg : Basic : &#8377;350 , Standard : &#8377;400 , Premium : &#8377;550
+                                    </li>
+                                    <li>Half back/Front : Basic : &#8377;250 , Standard : &#8377;350 , Premium :
+                                        &#8377;540</li>
+                                    <li>Full back/Front : Basic : &#8377;450 , Standard : &#8377;650 , Premium :
+                                        &#8377;850</li>
+                                    <li>Bikini Wax: Basic : &#8377;800 , Standard : &#8377;000 , Premium : &#8377;1200
+                                    </li>
+                                    <li>Full Body Wax: Basic : &#8377;1800 , Standard : &#8377;2200 , Premium :
+                                        &#8377;3300</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <div
+                                    class="text-2xl font-bold text-white navfont mt-5 animate__animated animate__fadeInUp">
+                                    Body Pampering</div>
+                                <ul class="text-white navfont mt-3 animate__animated animate__fadeInUp space-y-5">
+                                    <li>Head Massage: &#8377;200 , Standard : &#8377;350 , Premium : &#8377;500</li>
+                                    <li>Shoulder: &#8377;300 , Standard : &#8377;400 , Premium : &#8377;500</li>
+                                    <li>Foot : &#8377;250 , Standard : &#8377;350 , Premium : &#8377;450</li>
+                                    <li>Manicure : &#8377;600 , Standard : &#8377;800 , Premium : &#8377;1000</li>
+                                    <li>Pedicure : &#8377;650 , Standard : &#8377;850 , Premium : &#8377;1100</li>
+                                </ul>
+                            </div>
+                            <div class="flex justify-around flex-wrap md:flex-nowrap">
+                                <div class="lg:mt-10">
+                                    <div
+                                        class="text-2xl font-bold text-white navfont animate__animated animate__fadeInUp ">
+                                        FACIAL</div>
+                                    <ul class="text-white navfont mt-3 animate__animated animate__fadeInUp space-y-5">
+                                        <li>Charcoal: &#8377;800</li>
+                                        <li>Wine: &#8377;900</li>
+                                        <li>Chocolate: &#8377;1000</li>
+                                        <li>Furit: &#8377;1050</li>
+                                        <li>De-Tan : &#8377;1200</li>
+                                        <li>Gold: &#8377;1400</li>
+                                        <li>Diamond: &#8377;1450</li>
+                                        <li>Acne: &#8377;1600</li>
+                                        <li>SkinBrighting: &#8377;1800</li>
+                                        <li>Wriknle: &#8377;2000</li>
+                                        <li>Bridal: &#8377;2200</li>
+                                        <li>Hydra Facial: &#8377;3500</li>
+                                    </ul>
+                                </div>
+                                <div class="lg:mt-10">
+                                    <div
+                                        class="text-2xl font-bold text-white navfont mt-5 lg:mt-0 animate__animated animate__fadeInUp">
+                                        Bleach</div>
+                                    <ul class="text-white navfont mt-3 animate__animated animate__fadeInUp space-y-5">
+                                        <li>Upper lip: &#8377;100</li>
+                                        <li>Under arm: &#8377;150</li>
+                                        <li>Feet: &#8377;200</li>
+                                        <li>Face & Neck : &#8377;300</li>
+                                        <li>Half Arms : &#8377;350</li>
+                                        <li>Full Arms: &#8377;500</li>
+                                        <li>Half Legs : &#8377;400</li>
+                                        <li>Full Legs : &#8377;700</li>
+                                        <li>Full Back : &#8377;400</li>
+                                        <li>Full Front: &#8377;400</li>
+                                        <li>Full Body: &#8377;2200</li>
+                                        <li>FA / FL / UA : &#8377;1300</li>
+                                    </ul>
+                                </div>
+                                <div class="lg:mt-10">
+                                    <div
+                                        class="text-2xl font-bold text-white navfont mt-5 lg:mt-0 animate__animated animate__fadeInUp">
+                                        De-Tan</div>
+                                    <ul class="text-white navfont mt-3 animate__animated animate__fadeInUp space-y-5">
+                                        <li>Upper lip: &#8377;100</li>
+                                        <li>Under arm: &#8377;200</li>
+                                        <li>Feet : &#8377;200</li>
+                                        <li>Face & Neck: &#8377;500</li>
+                                        <li>Half Arms : &#8377;400</li>
+                                        <li>Full Arms : &#8377;550</li>
+                                        <li>Half Legs: &#8377;550</li>
+                                        <li>Full Legs: &#8377;750</li>
+                                        <li>Full Back: &#8377;700</li>
+                                        <li>Full Front: &#8377;700</li>
+                                        <li>Full Body: &#8377;1500</li>
+                                        <li>FA / FL / UA : &#8377;1450</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="womens" class="tab-content" style="display: none;">
+                <h2 class="text-5xl font-bold text-white navfont animate__animated animate__fadeInLeft">Women's Pricing
+                </h2>
+                <div class="flex justify-around flex-wrap md:flex-nowrap mt-10">
+                    <div>
+                        <div>
+                            <div class="text-2xl font-bold text-white navfont animate__animated animate__fadeInUp">HAIR
+                                CUT</div>
+                            <ul class="text-white navfont mt-3 animate__animated animate__fadeInUp space-y-5">
+                                <li>Trim / U-Cut / Straight Cut: Regular : &#8377;500 , Member : &#8377;400</li>
+                                <li>Layer trim : Regular : &#8377;700 , Member : &#8377;560</li>
+                                <li>Fringe cut : Regular : &#8377;100 , Member : &#8377;80</li>
+                                <li>Layer Cut & Creative Cut: &#8377;950 , Member : &#8377;760</li>
+                                <li>Kids Cut up to 10 Years: Regular : &#8377;250 , Member : - </li>
+                                <li>Creative Cut Kids : Regular : &#8377;350 , Member : - </li>
+                            </ul>
+                        </div>
+                        <div class="mt-10">
+                            <div class="text-2xl font-bold text-white navfont mt-5 animate__animated animate__fadeInUp">
+                                HAIR WASH/ BLAST
+                                DRY/BLOW DRY</div>
+                            <ul class="text-white navfont mt-3 animate__animated animate__fadeInUp space-y-5">
+                                <li>Shampoo &conditioner & Blaster: Regular : &#8377;350 , Member : &#8377;280</li>
+                                <li>Blow Dry Setting
+                                    : Regular : &#8377;500 , Member : &#8377;400</li>
+                                <li>Advance Blow Dry
+                                    (S/M/L) Curls/ Tongs / Ironing
+                                    : <br> Regular : &#8377;800/950/1300
+                                    , Member : &#8377;640/760/1040</li>
+                            </ul>
+                        </div>
+                        <div class="mt-10">
+                            <div class="text-2xl font-bold text-white navfont mt-5 animate__animated animate__fadeInUp">
+                                HAIR COLOUR</div>
+                            <ul class="text-white navfont mt-3 animate__animated animate__fadeInUp space-y-5">
+                                <li>Root Touch-up
+                                    : Regular : &#8377;1200 , Member : &#8377;960</li>
+                                <li>Ammonia Free: Basic : Regular : &#8377;1400 , Member : &#8377;1120</li>
+                                <li>Global Hair Colour
+                                    : Basic : Regular : &#8377;3500
+                                    , Member : &#8377;2800</li>
+                                <li>Global Hair Long
+                                    : Basic : Regular : &#8377;4500 , Member : &#8377;3600
+                                </li>
+                                <li>Global Fashion Colour : Regular : &#8377;3700 , Member : &#8377;2960</li>
+                                <li>Global Fashion Colour Long : Regular : &#8377;5000 , Member : &#8377;4000</li>
+                                <li>Ammonia Free Fashion Colour : Regular : &#8377;3800 , Member : &#8377;3040</li>
+                                <li>Ammonia Free Fashion Colour
+                                    Medium : Regular : &#8377;4500
+                                    , Member : &#8377;3600</li>
+                                <li>Ammonia Free Fashion Colour
+                                    Long : Regular : &#8377;5000 , Member : &#8377;4000</li>
+                                <li>Global + Highlights : Regular : &#8377;6000 , Member : &#8377;5200</li>
+                                <li>Global + Highlights Medium : Regular : &#8377;7000 , Member : &#8377;5600</li>
+                                <li>Global + Highlights Long Hair : Regular : &#8377;7500 , Member : &#8377;6000</li>
+                                <li>Single Streak Colours : Regular : &#8377;450 , Member : &#8377;360</li>
+                                <li>Full Streak : Regular : &#8377;5000 , Member : &#8377;4000</li>
+                            </ul>
+                        </div>
+                        <div class="mt-10">
+                            <div class="text-2xl font-bold text-white navfont animate__animated animate__fadeInUp">
+                                HAIR FORMS</div>
+                            <ul class="text-white navfont mt-3 animate__animated animate__fadeInUp space-y-5">
+                                <li>Smoothing S/ M / L
+                                    :Regular : &#8377;5000/ 6500 /7500
+                                    , Member : &#8377;4000/4960/6000</li>
+                                <li>Straightening
+                                    : Regular : &#8377;5000/ 6500 /7500 , Member : &#8377;4000/4960/6000
+                                </li>
+                                <li>Keratin : Regular : &#8377;5000/ 6500 /7500 , Member : &#8377;4000/4960/6000
+                                </li>
+                                <li>Botox: Regular : &#8377;8000/ 10000 /12000 , Member : &#8377;6400/8000/9600
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mt-10">
+                            <div class="text-2xl font-bold text-white navfont mt-5 animate__animated animate__fadeInUp">
+                                HAIR SPA</div>
+                            <ul class="text-white navfont mt-3 animate__animated animate__fadeInUp space-y-5">
+                                <li>Full Arms: Regular : &#8377;400
+                                    , Member : &#8377;320</li>
+                                <li>UnderArms: Regular : &#8377;150 , Member : &#8377;120</li>
+                                <li>Half Arms: Regular : &#8377;200 , Member : &#8377;160</li>
+                                <li>Full Legs: Regular : &#8377;600 , Member : &#8377;480</li>
+                                <li>Half Legs: Regular : &#8377;400 , Member : &#8377;320</li>
+                                <li>FA /FL / UA: Regular : &#8377;1500 , Member : &#8377;920</li>
+                                <li>Full Front: Regular : &#8377;600 , Member : &#8377;480</li>
+                                <li>Full Back: Regular : &#8377;600 , Member : &#8377;480</li>
+                                <li>Full Body: Regular : &#8377;2200 , Member : &#8377;1760</li>
+                                <li>Upper Lip: Regular : &#8377;100 , Member : &#8377;80</li>
+                                <li>Face: Regular : &#8377;300 , Member : &#8377;240</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="flex justify-around flex-nowrap md:flex-nowrap">
+                        <div class="">
+                            <div>
+                                <div
+                                    class="text-2xl font-bold text-white navfont mt-5 lg:mt-0 animate__animated animate__fadeInUp">
+                                    MASSAGE</div>
+                                <ul class="text-white navfont mt-3 animate__animated animate__fadeInUp space-y-5">
+                                    <li>Head massage Coconut Oil: <br>Regular : &#8377;500 , Member : &#8377;400</li>
+                                    <li>Head massage Almond Oil: <br> Regular : &#8377;700 , Member : &#8377;560</li>
+                                    <li>Head massage Olive Oil: <br> Regular : &#8377;800 , Member : &#8377;640</li>
+                                    <li>Head massage Navarathna
+                                        Oil : <br> Regular : &#8377;600 , Member : &#8377;480</li>
+                                    <li>Feet Massage : <br> Regular : &#8377;600 , Member : &#8377;480</li>
+                                    <li>Hand Massage : <br> Regular : &#8377;300 , Member : &#8377;480</li>
+                                    <li>Back & Neck: <br> Regular : &#8377;800 , Member : &#8377;640</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <div
+                                    class="text-2xl font-bold text-white navfont mt-5 animate__animated animate__fadeInUp">
+                                    TREADING</div>
+                                <ul class="text-white navfont mt-3 animate__animated animate__fadeInUp space-y-5">
+                                    <li>Eye Brow: Basic: &#8377;40</li>
+                                    <li>Upper Lip: Basic: &#8377;30</li>
+                                    <li>Lower Lip : Basic: &#8377;30</li>
+                                    <li>Chin & Neck: Basic: &#8377;40</li>
+                                    <li>Forehead: Basic: &#8377;40</li>
+                                    <li>Full Face: Basic: &#8377;150</li>
+                                </ul>
+                            </div>
+                            <div class="lg:mt-10">
+                                <div class="text-2xl font-bold text-white navfont animate__animated animate__fadeInUp ">
+                                    MANICURE
+                                    &PEDICURE</div>
+                                <ul class="text-white navfont mt-3 animate__animated animate__fadeInUp space-y-5">
+                                    <li>Coffee Manicure: Regular : &#8377;600 , Member : &#8377;480/li>
+                                    <li>Coffee Pedicure: Regular : &#8377;800 , Member : &#8377;560/li>
+                                    <li>De-tan Manicure: Regular : &#8377;700 , Member : &#8377;560</li>
+                                    <li>De-tan Pedicure: Regular : &#8377;800 , Member : &#8377;640</li>
+                                    <li>Skin-Brightness Manicure : Regular : &#8377;800 , Member : &#8377;640</li>
+                                    <li>Skin-Brightness Pedicure : Regular : &#8377;900 , Member : &#8377;720</li>
+                                    <li>Crystal Manicure: Regular : &#8377;900 , Member : &#8377;720</li>
+                                    <li>Crystal Pedicure: Regular : &#8377;1000 , Member : &#8377;800</li>
+                                    <li>Ice Cream - Manicure : Regular : &#8377;1000 , Member : &#8377;800</li>
+                                    <li>Ice Cream - Pedicure : Regular : &#8377;1100 , Member : &#8377;880</li>
+                                    <li>Heal Peel Treatment: Regular : &#8377;1400 , Member : &#8377;1120</li>
+                                </ul>
+                            </div>
+                            <div class="lg:mt-10">
+                                <div
+                                    class="text-2xl font-bold text-white navfont mt-5 lg:mt-0 animate__animated animate__fadeInUp">
+                                    FACIAL</div>
+                                <ul class="text-white navfont mt-3 animate__animated animate__fadeInUp space-y-5">
+                                    <li>Clean Up: Regular : &#8377;600 , Member : &#8377;480</li>
+                                    <li>Acne Clean Up: Regular : &#8377;700 , Member : &#8377;560</li>
+                                    <li>Charcoal Facial: Regular : &#8377;800 , Member : &#8377;640</li>
+                                    <li>Wine facial : Regular : &#8377;900 , Member : &#8377;720</li>
+                                    <li>Diamond facial : Regular : &#8377;900 , Member : &#8377;720</li>
+                                    <li>Chocolate Facial: Regular : &#8377;1000 , Member : &#8377;800</li>
+                                    <li>Fruit Facial: Regular : &#8377;1100 , Member : &#8377;880</li>
+                                    <li>De-Tan Facial : Regular : &#8377;1200 , Member : &#8377;960</li>
+                                    <li>Gold Facial: Regular : &#8377;1300 , Member : &#8377;1040</li>
+                                    <li>Acne Facial: Regular : &#8377;1500 , Member : &#8377;1200</li>
+                                    <li>Skin Brightening: Regular : &#8377;1600 , Member : &#8377;1280</li>
+                                    <li>Wrinkle Facial : Regular : &#8377;1800 , Member : &#8377;1440</li>
+                                    <li>Bridal Facial : Regular : &#8377;2000 , Member : &#8377;1600</li>
+                                    <li>Hydra Facial : Regular : &#8377;3500 , Member : &#8377;2800</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div>
+                        <div class="lg:mt-0">
+                            <div
+                                class="text-2xl font-bold text-white navfont mt-5 lg:mt-0 animate__animated animate__fadeInUp">
+                                BLEACH</div>
+                            <ul class="text-white navfont mt-3 animate__animated animate__fadeInUp space-y-5">
+                                <li>Upper Lip : Regular : &#8377;100 , Member : &#8377;80</li>
+                                <li>Under Arm : Regular : &#8377;150 , Member : &#8377;120</li>
+                                <li>Feet: Regular : &#8377;200 , Member : &#8377;160</li>
+                                <li>Face & Neck : Regular : &#8377;300 , Member : &#8377;240</li>
+                                <li>Full Arms : Regular : &#8377;400 , Member : &#8377;320</li>
+                                <li>Half Arms: Regular : &#8377;350 , Member : &#8377;280</li>
+                                <li>Full Legs: Regular : &#8377;700 , Member : &#8377;560</li>
+                                <li>Half Legs : Regular : &#8377;400 , Member : &#8377;320</li>
+                                <li>Full Back: Regular : &#8377;350 , Member : &#8377;280</li>
+                                <li>Full Front: Regular : &#8377;350 , Member : &#8377;280</li>
+                                <li>Full Body: Regular : &#8377;2000 , Member : &#8377;1600</li>
+                            </ul>
+                        </div>
+                        <div class="lg:mt-10">
+                            <div
+                                class="text-2xl font-bold text-white navfont mt-5 lg:mt-0 animate__animated animate__fadeInUp">
+                                De-Tan</div>
+                            <ul class="text-white navfont mt-3 animate__animated animate__fadeInUp space-y-5">
+                                <li>Upper lip: Regular: &#8377;100, Menber :80 </li>
+                                <li>Under arm: Regular: &#8377;200, Menber : 160 </li>
+                                <li>Feet : Regular: &#8377;200, Menber : 160 </li>
+                                <li>Face & Neck: Regular: &#8377;500, Menber :400 </li>
+                                <li>Half Arms : Regular: &#8377;400, Menber : 440</li>
+                                <li>Full Arms : Regular: &#8377;550, Menber :280 </li>
+                                <li>Half Legs: Regular: &#8377;550, Menber : 560</li>
+                                <li>Full Legs: Regular: &#8377;750, Menber : 320</li>
+                                <li>Full Back: Regular: &#8377;700, Menber : 400</li>
+                                <li>Full Front: Regular: &#8377;500, Menber : 400</li>
+                                <li>Full Body: Regular: &#8377;250, Menber : 2000</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script>
+    document.getElementById('menu-btn').addEventListener('click', function () {
+        const menu = document.getElementById('mobile-menu');
+        const icon = document.getElementById('menu-icon');
+        menu.classList.toggle('hidden');
+        if (menu.classList.contains('hidden')) {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        } else {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-times');
+        }
+    });
+</script>
+<script>
+    function openTab(event, tabName) {
+        // Hide all tab content
+        var tabContents = document.getElementsByClassName('tab-content');
+        for (var i = 0; i < tabContents.length; i++) {
+            tabContents[i].style.display = 'none';
+        }
+
+        // Remove active class from all tab links
+        var tabLinks = document.getElementsByClassName('tab-link');
+        for (var i = 0; i < tabLinks.length; i++) {
+            tabLinks[i].classList.remove('active');
+        }
+
+        // Show the selected tab content
+        document.getElementById(tabName).style.display = 'block';
+
+        // Add active class to the clicked button
+        event.currentTarget.classList.add('active');
+    }
+
+    // By default, show the men's pricing content
+    document.getElementById('mens').style.display = 'block';
+</script>
+
+</html>

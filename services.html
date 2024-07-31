@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Unisex Salon</title>
+    <link href="./output.css" rel="stylesheet">
+    <link href="/dist/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+
+<body class="bg-gray-100">
+    <!-- NAVBAR  -->
+    <section class="sticky top-0 left-0 z-50">
+        <div class=" bg-black shadow-lg">
+            <div class="container mx-auto flex items-center justify-between  py-3 px-5 ">
+                <div class="w-28 md:w-32 lg:w-40 cursor-pointer">
+                    <img src="assets/Indian_barber/Unisex_Saloon_Logo.webp" alt="Barber Logo">
+                </div>
+                <div class="hidden md:flex md:space-x-5 lg:space-x-10 md:text-md lg:text-lg navfont">
+                    <a href="index.html"
+                        class="hover:text-amber-700 text-white duration-500 ease-in-out animate__animated animate__fadeInUp">Home</a>
+                    <a href="services.html"
+                        class="hover:text-amber-700 text-white duration-500 ease-in-out animate__animated animate__fadeInUp">Services</a>
+                    <a href="pricing.html"
+                        class="hover:text-amber-700 text-white duration-500 ease-in-out animate__animated animate__fadeInUp">Pricing</a>
+                    <a href="appointment.html"
+                        class="hover:text-amber-700 text-white duration-500 ease-in-out animate__animated animate__fadeInUp">Book
+                        and
+                        Appointment</a>
+                    <a href="blogs.html"
+                        class="hover:text-amber-700 text-white duration-500 ease-in-out animate__animated animate__fadeInUp">Blogs</a>
+                    <a href="contactus.html"
+                        class="hover:text-amber-700 text-white duration-500 ease-in-out animate__animated animate__fadeInUp">Contact
+                        US</a>
+                </div>
+                <div class="hidden md:flex gap-5">
+                    <div>
+                        <i class="fa-solid fa-magnifying-glass" style="color: white;"></i>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-cart-plus" style="color: white;"></i>
+                    </div>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-xl">
+                        <i id="menu-icon" class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden fixed bg-white w-full z-30 md:hidden lg:hidden">
+            <div class="flex flex-col items-center space-y-4 py-5">
+                <a href="#" class="hover:text-amber-700 navfont animate__animated animate__fadeInUp">Home</a>
+                <a href="#" class="hover:text-amber-700 navfont animate__animated animate__fadeInUp">Services</a>
+                <a href="pricing.html" class="hover:text-amber-700 animate__animated animate__fadeInUp">Pricing</a>
+                <a href="#" class="hover:text-amber-700 navfont animate__animated animate__fadeInUp">Book and
+                    Appointment</a>
+                <a href="#" class="hover:text-amber-700 navfont animate__animated animate__fadeInUp">Blogs</a>
+                <a href="#" class="hover:text-amber-700 navfont animate__animated animate__fadeInUp">Contact US</a>
+                <div class="flex gap-5">
+                    <div>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-cart-plus"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="services_bg">
+        <div class="container mx-auto p-4 navfont ">
+            <h1 class="text-3xl font-bold text-white text-center mb-6">Our Services</h1>
+            <h1 class="text-5xl font-bold text-white text-center lg:text-left mb-6">Men</h1>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded shadow-md">
+                    <h2 class="text-xl font-bold mb-2">Haircut</h2>
+                    <p class="text-gray-700 mb-4">Experience a refreshing haircut by our professional stylists.</p>
+                    <p class="text-gray-900 font-bold">$30</p>
+                </div>
+                <div class="bg-white p-6 rounded shadow-md">
+                    <h2 class="text-xl font-bold mb-2">Shave</h2>
+                    <p class="text-gray-700 mb-4">Get a clean, smooth shave with our premium products.</p>
+                    <p class="text-gray-900 font-bold">$15</p>
+                </div>
+                <div class="bg-white p-6 rounded shadow-md">
+                    <h2 class="text-xl font-bold mb-2">Hair Style Change</h2>
+                    <p class="text-gray-700 mb-4">Rejuvenate your skin with our relaxing facials.</p>
+                    <p class="text-gray-900 font-bold">$50</p>
+                </div>
+                <div class="bg-white p-6 rounded shadow-md">
+                    <h2 class="text-xl font-bold mb-2">Facial</h2>
+                    <p class="text-gray-700 mb-4">Rejuvenate your skin with our relaxing facials.</p>
+                    <p class="text-gray-900 font-bold">$50</p>
+                </div>
+            </div>
+
+            <h1 class="text-5xl font-bold text-white text-center lg:text-left mb-6 mt-10">Women</h1>
+            <div class="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
+                <!-- Haircuts -->
+                <div class="bg-white p-4 rounded shadow">
+                    <h2 class="text-xl font-bold mb-2">Haircuts</h2>
+                    <p class="text-gray-700">Classic Bob, Pixie Cut, Layered Cut, Bang Styles, and more.</p>
+                </div>
+                <!-- Hair Coloring -->
+                <div class="bg-white p-4 rounded shadow">
+                    <h2 class="text-xl font-bold mb-2">Hair Coloring</h2>
+                    <p class="text-gray-700">Balayage, Ombre, Highlights, Fantasy Colors, and more.</p>
+                </div>
+                <!-- Styling Services -->
+                <div class="bg-white p-4 rounded shadow">
+                    <h2 class="text-xl font-bold mb-2">Styling Services</h2>
+                    <p class="text-gray-700">Blowouts, Updos, Beach Waves, Straightening, and more.</p>
+                </div>
+                <!-- Hair Treatments -->
+                <div class="bg-white p-4 rounded shadow">
+                    <h2 class="text-xl font-bold mb-2">Hair Treatments</h2>
+                    <p class="text-gray-700">Keratin Treatment, Deep Conditioning, Scalp Treatments, and more.</p>
+                </div>
+                <!-- Facial Services -->
+                <div class="bg-white p-4 rounded shadow">
+                    <h2 class="text-xl font-bold mb-2">Facial Services</h2>
+                    <p class="text-gray-700">Facials, Microdermabrasion, Chemical Peels, Face Masks, and more.</p>
+                </div>
+                <!-- Nail Services -->
+                <div class="bg-white p-4 rounded shadow">
+                    <h2 class="text-xl font-bold mb-2">Nail Services</h2>
+                    <p class="text-gray-700">Manicures, Pedicures, Nail Art, and more.</p>
+                </div>
+                <!-- Makeup Services -->
+                <div class="bg-white p-4 rounded shadow">
+                    <h2 class="text-xl font-bold mb-2">Makeup Services</h2>
+                    <p class="text-gray-700">Makeup Application, Eyebrow Shaping, Eyelash Extensions, and more.</p>
+                </div>
+                <!-- Waxing Services -->
+                <div class="bg-white p-4 rounded shadow">
+                    <h2 class="text-xl font-bold mb-2">Waxing Services</h2>
+                    <p class="text-gray-700">Body Waxing, Facial Waxing, and more.</p>
+                </div>
+                <!-- Spa Services -->
+                <div class="bg-white p-4 rounded shadow">
+                    <h2 class="text-xl font-bold mb-2">Spa Services</h2>
+                    <p class="text-gray-700">Massages, Body Scrubs, and more.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

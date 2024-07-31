@@ -57,3 +57,26 @@
     background-repeat: no-repeat;
     
 }
+
+
+
+/* Pricing Menu  */
+.pricing_menu{
+    background-image: url('assets/Indian_barber/Pricing_menu_2.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Booking Appointment  */
+.booking{
+    background-image: url('assets/Indian_barber/Appointment4.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Services Background */
+.services_bg{
+    background-image: url('assets/Indian_barber/Services_Background.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
